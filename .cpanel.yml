@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=
+/home/sistem18/public_html/bicho44/siaproject/
+    - /bin/cp -R /siaproject $DEPLOYPATH
