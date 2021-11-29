@@ -22,6 +22,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/sia/', [
+    SIAController::class,
+    'index',
+])->middleware(['auth'])->name('sia');
+
 Route::get('/sia/view/{data}', [
     SIAController::class,
     'show',
@@ -29,11 +34,11 @@ Route::get('/sia/view/{data}', [
 
 Route::get('/sia/pdf', function () {
     return view('sia.pdf');
-})->middleware(['auth'])->name('sia.view');
+})->middleware(['auth']);
 
 Route::get('/sia/view/{id}', function () {
     return view('sia.view');
-})->middleware(['auth'])->name('sia.view');
+})->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';

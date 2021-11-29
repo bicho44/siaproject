@@ -14,7 +14,8 @@ class SIAController extends Controller
      */
     public function index()
     {
-        //
+        $header = 'SIA';
+        return view('sia.index');
     }
 
     /**
@@ -27,7 +28,7 @@ class SIAController extends Controller
     {
         $data=json_decode($request->getContent(),true);
 
-        dump($data);
+        dump($request->getContent());
         return view('sia.view', compact('data'));
     }
     

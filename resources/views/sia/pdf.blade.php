@@ -23,18 +23,18 @@
 
 <table style="width: 100%; font-size: 8pt;">
 <tr>
-<td>ID: <strong>{{ $employee->id }}</strong></td>
-<td>Nombre: <strong>{{ $employee->name }}</strong></td>
+<td>ID: <strong>{{ $employee ?? ''->id }}</strong></td>
+<td>Nombre: <strong>{{ $employee ?? ''->name }}</strong></td>
 </tr>
 
 <tr>
-<td>Created: <strong>{{ $employee->dob }}</strong></td>
+<td>Created: <strong>{{ $employee ?? ''->dob }}</strong></td>
 <td>Last Change: <strong>2004-08-16  9:28 AM</strong></td>
 </tr>
 
 <tr>
-<td>Address: <strong>{{ $employee->address }}</strong></td>
-<td>Tel: <strong>{{ $employee->phone_number }}</strong></td>
+<td>Address: <strong>{{ $employee ?? ''->address }}</strong></td>
+<td>Tel: <strong>{{ $employee ?? ''->phone_number }}</strong></td>
 </tr>
 </table>
 
