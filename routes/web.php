@@ -30,7 +30,7 @@ Route::get('/sia/', [
 Route::get('/sia/view/{data}', [
     SIAController::class,
     'show',
-])->middleware(['auth']);
+]);
 
 Route::get('/sia/pdf', function () {
     return view('sia.pdf');
