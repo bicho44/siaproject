@@ -15,6 +15,7 @@ class SIAController extends Controller
     public function index()
     {
         $header = 'SIA';
+        //https://sistematizar.ar/api/siaweb/
         return view('sia.index');
     }
 
@@ -52,8 +53,53 @@ class SIAController extends Controller
      * @param  int  $id
      * @return \Barryvdh\Snappy\Facades\PDF
      */  
-    public function createpdf(Request $request)
+     public function pdf(Sia $sia)
     {
-         //
+        $siaData=json_decode($request->getContent(),true);
+        
+        $title = __('SIA ' . $sia->name);
+        $copy =
+            '@Copyright ' .
+            date('Y') .
+            ' - <a href="https://imgdigital.com.ar">IMGDigital</a>';
+
+        // share data to view
+        view()->share([
+            'employee' => $employee,
+            'title' => $title,
+            'pie' => $copy,
+        ]);
+
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->getDomPDF()->set_option('enable_php', true);
+
+        $pdf->loadView('empleados.pdf2', [
+            'employee' => $employee,
+            'title' => $title,
+            'pie' => $copy,
+        ]);
+
+        $file = Str::slug($title) . '-' . today()->format('Y-m-d') . '.pdf';
+
+        // download PDF file with download method
+        // return $pdf->download($file . '.pdf');
+
+        //$pdf->render();
+
+        $archivo = $pdf->output();
+
+        // Crea el PDF file with escribiendo el archivo en el directorio /pdf method
+        if (file_put_contents('pdf/' . $file, $archivo) === false) {
+            session()->flash(
+                'error',
+                'Error al exportar el PDF "' . $file . '"'
+            );
+        } else {
+            session()->flash(
+                'success',
+                'Export PDF "' . $file . '", realizado correctamente'
+            );
+        }
+        return redirect('/empleados');
     }
 }
