@@ -27,18 +27,18 @@ Route::get('/sia/', [
     'index',
 ])->middleware(['auth'])->name('sia');
 
-Route::get('/sia/view/{data}', [
+Route::get('/sia/view/{id}', [
     SIAController::class,
-    'show',
-]);
+    'show'
+])->middleware(['auth']);
 
 Route::get('/sia/pdf', function () {
     return view('sia.pdf');
 })->middleware(['auth']);
 
-Route::get('/sia/view/{id}', function () {
-    return view('sia.view');
-})->middleware(['auth']);
+//Route::get('/sia/view/{id}', function () {
+//    return view('sia.view');
+//})->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';
