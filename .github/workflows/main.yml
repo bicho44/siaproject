@@ -12,6 +12,23 @@ jobs:
           host: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
-          localDir: 'public'
+          localDir: 'public/'
           remoteDir: '/home/sistem18/public_html/bicho44/'
+          options: '--delete --asci'
+
+      - uses: actions/checkout@v2
+      - name: Upload Laravel
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ftp.sistematizar.ar
+          user: bicho44@sistematizar.ar
+          password: bicho44qwe
+          localDir: './'
+          remoteDir: '/home/sistem18/laravel/'
+          exclude: |
+            */.git*
+            **/.git*/**
+            **/node_modules/**
+            **/public/**
+            */.env*
           options: '--delete --asci'
