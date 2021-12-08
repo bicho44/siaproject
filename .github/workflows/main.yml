@@ -2,7 +2,7 @@ name: Deploy via ftp
 on: push
 jobs:
   deploy:
-    name: Deploy
+    name: Public
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,6 +12,6 @@ jobs:
           host: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
-          localDir: '.'
-          remoteDir: '/home/sistem18/public_html/bicho44/siproject'
+          localDir: 'public'
+          remoteDir: '/home/sistem18/public_html/bicho44/'
           options: '--delete --asci'

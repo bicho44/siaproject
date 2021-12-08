@@ -17,7 +17,8 @@ Homestead.json
 /.vagrant
 
 # Algo por Fede
-
 composer.lock
 .DS_Store
-/.idea
+.idea
+tests/
+artisan
