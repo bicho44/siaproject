@@ -10,7 +10,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: ftp.sistematizar.ar
-          user: bicho44@sistematizar.ar
+          username: bicho44@sistematizar.ar
           password: bicho44qwe
           local-dir: 'public/'
           server-dir: '/home/sistem18/public_html/bicho44/'
@@ -22,7 +22,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: ftp.sistematizar.ar
-          user: bicho44@sistematizar.ar
+          username: bicho44@sistematizar.ar
           password: bicho44qwe
           local-dir: './'
           server-dir: '/home/sistem18/laravel/'
