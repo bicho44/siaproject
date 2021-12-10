@@ -9,11 +9,11 @@ jobs:
       - name: Upload ftp
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ftp.sistematizar.ar
+          server: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
-          localDir: 'public/'
-          remoteDir: '/home/sistem18/public_html/bicho44/'
+          local-dir: 'public/'
+          server-dir: '/home/sistem18/public_html/bicho44/'
           dry-run: true
           options: '--delete --asci --changed-onl'
 
@@ -21,11 +21,11 @@ jobs:
       - name: Upload Laravel
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ftp.sistematizar.ar
+          server: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
-          localDir: './'
-          remoteDir: '/home/sistem18/laravel/'
+          local-dir: './'
+          server-dir: '/home/sistem18/laravel/'
           dry-run: true
           exclude: |
             */.git*
