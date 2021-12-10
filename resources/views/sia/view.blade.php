@@ -26,17 +26,6 @@
             <div class="col-span-2 bg-white overflow-hidden shadow-sm p-5 mb-4 border-1 border-gray-300 rounded-lg">
 
                 <h3 class="text-xl font-bold">Datos Liquidación</h3>
-                {{-- "datos_liquidacion" => array:4 [▼
-                "perdiodo" => "09/2016"
-                "comprobante" => "37,355"
-                "prox_vencimiento" => "10-11-2016"
-                "lecturas" => array:4 [▼
-                "anterior" => array:2 [▶]
-                "actual" => array:2 [▶]
-                "consumo" => "37,355"
-                "tipo_consumo" => array:3 [▶]
-                ]
-                ] --}}
                 <ul>
                     <li> <strong>Periodo: </strong> {{ $employee['datos_liquidacion']['perdiodo'] }}</li>
                     <li> <strong>Comprobante: </strong> {{ $employee['datos_liquidacion']['comprobante'] }}</li>

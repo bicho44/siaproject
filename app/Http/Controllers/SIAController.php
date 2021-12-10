@@ -30,14 +30,14 @@ class SIAController extends Controller
      */
     public function show($id)
     {
-        
-        $employee = Http::get(config('services.siaapi.url').'?c='.$id)->json()['results'][0];
-        
+        $employee = Http::get(
+            config('services.siaapi.url') . '?c=' . $id
+        )->json()['results'][0];
+
         // dump($employee);
 
         return view('sia.view', compact('employee'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -58,9 +58,9 @@ class SIAController extends Controller
      * @param  int  $id
      * @return \Barryvdh\Snappy\Facades\PDF
      */
-     public function pdf(Sia $sia)
+    public function pdf(Sia $sia)
     {
-        $siaData=json_decode($request->getContent(),true);
+        $siaData = json_decode($request->getContent(), true);
 
         $title = __('SIA ' . $sia->name);
         $copy =
