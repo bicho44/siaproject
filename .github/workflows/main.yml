@@ -1,12 +1,12 @@
-name: Deploy via ftp
+name: SIA WEB
 on: push
 jobs:
   deploy:
-    name: Public
+    name: Subir Cambios Laravel
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Upload ftp
+      - name: Upload Public
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: ftp.sistematizar.ar
@@ -15,7 +15,6 @@ jobs:
           local-dir: 'public/'
           server-dir: '/home/sistem18/public_html/bicho44/'
           dry-run: true
-          options: '--delete --asci --changed-onl'
 
       - uses: actions/checkout@v2
       - name: Upload Laravel
@@ -38,4 +37,3 @@ jobs:
             **/vendor/bin/**
             */artisan*
             **/tests/**
-          options: '--delete --asci --changed-onl'
