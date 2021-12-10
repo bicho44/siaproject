@@ -31,11 +31,11 @@ class SIAController extends Controller
     public function show($id)
     {
         
-        $boleta = Http::get(config('services.siaapi.url').'?c='.$id)->json()['results'];
+        $employee = Http::get(config('services.siaapi.url').'?c='.$id)->json()['results'][0];
+        
+        // dump($employee);
 
-        dump($boleta);
-
-        return view('sia.view', compact('boleta'));
+        return view('sia.view', compact('employee'));
     }
 
 

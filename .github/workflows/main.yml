@@ -7,28 +7,35 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           host: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
           localDir: 'public/'
           remoteDir: '/home/sistem18/public_html/bicho44/'
-          options: '--delete --asci'
+          dry-run: true
+          options: '--delete --asci --changed-onl'
 
       - uses: actions/checkout@v2
       - name: Upload Laravel
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           host: ftp.sistematizar.ar
           user: bicho44@sistematizar.ar
           password: bicho44qwe
           localDir: './'
           remoteDir: '/home/sistem18/laravel/'
+          dry-run: true
           exclude: |
             */.git*
+            */.gitattributes*
             **/.git*/**
             **/node_modules/**
             **/public/**
             */.env*
-          options: '--delete --asci'
+            **/.idea/**
+            **/vendor/bin/**
+            */artisan*
+            **/tests/**
+          options: '--delete --asci --changed-onl'
