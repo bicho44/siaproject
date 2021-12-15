@@ -9,11 +9,11 @@ jobs:
       - name: Upload Public
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ateste.ar
+          server: c2290501.ferozo.com
           username: sia@ateste.ar
           password: Siatestear1234
           local-dir: 'public/'
-          server-dir: '/public_html/sia/'
+          server-dir: '/'
 
       - uses: actions/checkout@v2
       - name: Upload Laravel
