@@ -9,21 +9,21 @@ jobs:
       - name: Upload Public
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ateste.ar
-          username: sia@ateste.ar
-          password: Siatestear1234
+          server: ftp.sistematizar.ar
+          username: bicho44@sistematizar.ar
+          password: bicho44qwe
           local-dir: 'public/'
-          server-dir: '/public_html/'
+          server-dir: '/home/sistem18/public_html/bicho44/'
 
       - uses: actions/checkout@v2
       - name: Upload Laravel
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: c2290501.ferozo.com
-          username: ftp@c2290501.ferozo.com
-          password: we82fuBOdu
+          server: ftp.sistematizar.ar
+          username: bicho44@sistematizar.ar
+          password: bicho44qwe
           local-dir: './'
-          server-dir: '/siasystem/'
+          server-dir: '/home/sistem18/laravel/'
           dry-run: true
           exclude: |
             */.git*
