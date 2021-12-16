@@ -1,12 +1,12 @@
-name: SIA WEB
+name: SIA WEB a Testear
 on: push
 jobs:
   deploy:
-    name: Subir Cambios Laravel
+    name: SIA A Testear
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Upload Public
+      - name: Upload SIA Public
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: c2290501.ferozo.com
@@ -16,7 +16,7 @@ jobs:
           server-dir: '/'
 
       - uses: actions/checkout@v2
-      - name: Upload Laravel
+      - name: Upload SIA System
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: c2290501.ferozo.com
