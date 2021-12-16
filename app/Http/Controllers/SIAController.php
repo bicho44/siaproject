@@ -8,7 +8,7 @@ use PDF;
 
 class SIAController extends Controller
 {
-    //public $siaapi = "https://sistematizar.ar/api/siaweb/datosBoletas.php";
+    //public $siaapi = "https://sistematizar.ar/api/siaweb/datosBoletas.php" ;
 
     /**
      * Display a listing of the resource.
