@@ -34,7 +34,7 @@ class SIAController extends Controller
             config('services.siaapi.url') . '?c=' . $id
         )->json()['results'][0];
 
-         dump($employee);
+        // dump($employee);
 
         return view('sia.view', compact('employee'));
     }

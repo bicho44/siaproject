@@ -2,7 +2,7 @@ APP_NAME=SiaProject
 APP_ENV=local
 APP_KEY=base64:IbW4ODZOxNibugbNMEDJz9dFvVus+2jJ4LQYqNpnjWE=
 APP_DEBUG=false
-APP_URL=https://sistematizar.ar/bicho44/siaproject/public
+APP_URL=https://ateste.ar/sia/
 
 LOG_CHANNEL=stack
 LOG_LEVEL=debug
