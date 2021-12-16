@@ -23,7 +23,7 @@ jobs:
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
           local-dir: './'
-          server-dir: '/siasystem/'
+          server-dir: '/public_html/siasystem/'
           exclude: |
             */.git*
             */.gitattributes*
