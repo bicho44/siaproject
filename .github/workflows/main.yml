@@ -24,7 +24,6 @@ jobs:
           password: we82fuBOdu
           local-dir: './'
           server-dir: '/siasystem/'
-          dry-run: true
           exclude: |
             */.git*
             */.gitattributes*
