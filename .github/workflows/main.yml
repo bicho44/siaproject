@@ -29,6 +29,10 @@ jobs:
           exclude: |
             */.git*
             */.gitattributes*
+            */.cpanel.yml*
+            */.editorconfig*
+            */.envatestear*
+            */.styleci.yml*
             **/.git*/**
             **/node_modules/**
             **/public/**
@@ -37,3 +41,14 @@ jobs:
             **/vendor/bin/**
             */artisan*
             **/tests/**
+            **/vendor/**
+
+      - uses: actions/checkout@v2
+      - name: Upload SIA Vendor
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: c2290501.ferozo.com
+          username: ftp@c2290501.ferozo.com
+          password: we82fuBOdu
+          local-dir: './vendor'
+          server-dir: '/public_html/siasystem/vendor/'
