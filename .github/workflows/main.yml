@@ -4,7 +4,7 @@ jobs:
   deploy:
     name: SIA A Testear
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v2
       - name: Upload SIA Public
