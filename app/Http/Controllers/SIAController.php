@@ -18,7 +18,7 @@ class SIAController extends Controller
     public function index()
     {
         $header = 'SIA';
-        //https://sistematizar.ar/api/siaweb/
+        // https://sistematizar.ar/api/siaweb/
         return view('sia.index');
     }
 
