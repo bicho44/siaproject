@@ -4,6 +4,7 @@ jobs:
   deploy:
     name: SIA A Testear
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v2
       - name: Upload SIA Public
@@ -38,10 +39,11 @@ jobs:
             **/public/**
             */.env*
             **/.idea/**
-            **/vendor/bin/**
             */artisan*
             **/tests/**
             **/vendor/**
+            **/bootsrap/cache/.php*/**
+            **/storage/logs/.log*/**
 
       - uses: actions/checkout@v2
       - name: Upload SIA Vendor
@@ -52,3 +54,5 @@ jobs:
           password: we82fuBOdu
           local-dir: './vendor/'
           server-dir: '/public_html/siasystem/vendor/'
+          exclude: |
+            **/vendor/bin/**
