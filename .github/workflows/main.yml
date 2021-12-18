@@ -50,5 +50,5 @@ jobs:
           server: c2290501.ferozo.com
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
-          local-dir: './vendor'
+          local-dir: './vendor/'
           server-dir: '/public_html/siasystem/vendor/'
