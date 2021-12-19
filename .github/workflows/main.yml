@@ -46,7 +46,7 @@ jobs:
             **/storage/logs/.log*/**
 
       - uses: actions/checkout@v2
-      - name: Upload SIA Vendor
+      - name: Upload SIA Vendor parte 1
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: c2290501.ferozo.com
@@ -55,4 +55,41 @@ jobs:
           local-dir: './vendor/'
           server-dir: '/public_html/siasystem/vendor/'
           exclude: |
-            **/vendor/bin/**
+            **/bin/**
+            **/fruitcake/**
+            **/graham-campbell/**
+            **/guzzlehttp/**
+            **/hamcrest/**
+            **/laravel/**
+            **/league/**
+            **/mockery/**
+            **/monolog/**
+            **/myclabs/**
+            **/nesbot/**
+            **/nette/**
+            **/nikic/**
+            **/nunomaduro/**
+            **/opis/**
+            **/phat-io/**
+
+      - uses: actions/checkout@v2
+      - name: Upload SIA Vendor parte 2
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: c2290501.ferozo.com
+          username: ftp@c2290501.ferozo.com
+          password: we82fuBOdu
+          local-dir: './vendor/'
+          server-dir: '/public_html/siasystem/vendor/'
+          exclude: |
+            **/bin/**
+            **/asm89/**
+            **/barryvdh/**
+            **/brick/**
+            **/composer/**
+            **/dflydev/**
+            **/doctrine/**
+            **/dragonmantank/**
+            **/egulias/**
+            **/facade/**
+            **/fakerphp/**
