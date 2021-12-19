@@ -75,6 +75,7 @@ jobs:
             **/phar-io/**
             **/phenx/**
             **/phpdocumentor/**
+            **/phpunit/**
             **/psr/**
             **/psy/**
             **/ralouphie/**
@@ -106,7 +107,6 @@ jobs:
             **/dragonmantank/**
             **/egulias/**
             **/facades/**
-            **/phpunit/**
             **/phpspec/**
             **/webmozart/**
             **/tijsverkoyen/**
