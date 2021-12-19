@@ -56,6 +56,8 @@ jobs:
           server-dir: '/public_html/siasystem/vendor/'
           exclude: |
             **/bin/**
+            **/fakerphp/**
+            **/filp/**
             **/fruitcake/**
             **/graham-campbell/**
             **/guzzlehttp/**
@@ -91,5 +93,3 @@ jobs:
             **/doctrine/**
             **/dragonmantank/**
             **/egulias/**
-            **/facade/**
-            **/fakerphp/**

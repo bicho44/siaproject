@@ -1,5 +1,5 @@
 APP_NAME=SiaProject
-APP_ENV=local
+APP_ENV=production
 APP_KEY=base64:IbW4ODZOxNibugbNMEDJz9dFvVus+2jJ4LQYqNpnjWE=
 APP_DEBUG=false
 APP_URL=https://ateste.ar/sia/
