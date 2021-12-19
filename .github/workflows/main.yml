@@ -111,3 +111,59 @@ jobs:
             **/webmozart/**
             **/tijsverkoyen/**
             **/theseer/**
+            **/laravel/**
+
+      - uses: actions/checkout@v2
+      - name: Upload SIA Vendor parte 2
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: c2290501.ferozo.com
+          username: ftp@c2290501.ferozo.com
+          password: we82fuBOdu
+          local-dir: './vendor/'
+          server-dir: '/public_html/siasystem/vendor/'
+          exclude: |
+            **/bin/**
+            **/fakerphp/**
+            **/filp/**
+            **/fruitcake/**
+            **/graham-campbell/**
+            **/guzzlehttp/**
+            **/hamcrest/**
+            **/laravel/**
+            **/league/**
+            **/mockery/**
+            **/monolog/**
+            **/myclabs/**
+            **/nesbot/**
+            **/nette/**
+            **/nikic/**
+            **/nunomaduro/**
+            **/opis/**
+            **/phar-io/**
+            **/phenx/**
+            **/phpdocumentor/**
+            **/phpunit/**
+            **/psr/**
+            **/psy/**
+            **/ralouphie/**
+            **/ramsey/**
+            **/sabberworm/**
+            **/sebastian/**
+            **/swiftmailer/**
+            **/symfony/**
+            **/vlucas/**
+            **/voku/**
+            **/asm89/**
+            **/barryvdh/**
+            **/brick/**
+            **/composer/**
+            **/dflydev/**
+            **/doctrine/**
+            **/dragonmantank/**
+            **/egulias/**
+            **/facades/**
+            **/phpspec/**
+            **/webmozart/**
+            **/tijsverkoyen/**
+            **/theseer/**
