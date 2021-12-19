@@ -72,7 +72,19 @@ jobs:
             **/nikic/**
             **/nunomaduro/**
             **/opis/**
-            **/phat-io/**
+            **/phar-io/**
+            **/phenx/**
+            **/phpdocumentor/**
+            **/psr/**
+            **/psy/**
+            **/ralouphie/**
+            **/ramsey/**
+            **/sabberworm/**
+            **/sebastian/**
+            **/swiftmailer/**
+            **/symfony/**
+            **/vlucas/**
+            **/voku/**
 
       - uses: actions/checkout@v2
       - name: Upload SIA Vendor parte 2
@@ -93,3 +105,9 @@ jobs:
             **/doctrine/**
             **/dragonmantank/**
             **/egulias/**
+            **/facades/**
+            **/phpunit/**
+            **/phpspec/**
+            **/webmozart/**
+            **/tijsverkoyen/**
+            **/theseer/**
