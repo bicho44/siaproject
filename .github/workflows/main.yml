@@ -13,8 +13,8 @@ jobs:
           server: c2290501.ferozo.com
           username: sia@ateste.ar
           password: Siatestear1234
-          local-dir: 'public/'
-          server-dir: '/'
+          local-dir: "public/"
+          server-dir: "/"
           exclude: |
             */index.php*
 
@@ -25,8 +25,8 @@ jobs:
           server: c2290501.ferozo.com
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
-          local-dir: './'
-          server-dir: '/public_html/siasystem/'
+          local-dir: "./"
+          server-dir: "/public_html/siasystem/"
           exclude: |
             */.git*
             */.gitattributes*
@@ -52,8 +52,8 @@ jobs:
           server: c2290501.ferozo.com
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
-          local-dir: './vendor/'
-          server-dir: '/public_html/siasystem/vendor/'
+          local-dir: "./vendor/"
+          server-dir: "/public_html/siasystem/vendor/"
           exclude: |
             **/bin/**
             **/fakerphp/**
@@ -94,8 +94,8 @@ jobs:
           server: c2290501.ferozo.com
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
-          local-dir: './vendor/'
-          server-dir: '/public_html/siasystem/vendor/'
+          local-dir: "./vendor/"
+          server-dir: "/public_html/siasystem/vendor/"
           exclude: |
             **/bin/**
             **/asm89/**
@@ -114,14 +114,14 @@ jobs:
             **/laravel/**
 
       - uses: actions/checkout@v2
-      - name: Upload SIA Vendor parte 2
+      - name: Upload SIA Vendor parte 3
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: c2290501.ferozo.com
           username: ftp@c2290501.ferozo.com
           password: we82fuBOdu
-          local-dir: './vendor/'
-          server-dir: '/public_html/siasystem/vendor/'
+          local-dir: "./vendor/"
+          server-dir: "/public_html/siasystem/vendor/"
           exclude: |
             **/bin/**
             **/fakerphp/**
